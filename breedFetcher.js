@@ -7,9 +7,6 @@ const fetchBreedDescription = function(breedName, callback) {
   request(url, (error, response, body) => {
     const data = JSON.parse(body);
     let breedInfo = data[0];
-    if (breedInfo === null) {
-      console.log('error');
-    }
     if (error) {
       callback('error', null);
     }
